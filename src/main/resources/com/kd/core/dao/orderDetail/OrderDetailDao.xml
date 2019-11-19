@@ -225,6 +225,9 @@ LEFT JOIN user_info u on u.userid=t.creator
      <if test="meetRoomID != null and meetRoomID != ''">
     	and td.meetRoomID = #{meetRoomID} 
     </if>
+    <if test="creator != null and creator != ''">
+    	and td.creator = #{creator} 
+    </if>
    	</where>
    	order by td.create_time desc
     </select>
